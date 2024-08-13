@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b659be-50a4-45f7-ada1-4bac311ead1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ImCompress.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="78b659be-50a4-45f7-ada1-4bac311ead1e" name="Changes" comment="fixup! Added Synthetic Image Sample to differentiate Lanczos and Nearest Neighbor Interpolation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,25 +19,38 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2kXkvsK0ebuKfeKSCPCe56lwGRc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.ImCompress.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "configurable.group.build"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ImCompress.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testfile.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luthf\PycharmProjects\imCompress\RealPersonSample" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -58,6 +67,66 @@
       <option name="presentableId" value="Default" />
       <updated>1723437543465</updated>
     </task>
+    <task id="LOCAL-00001" summary="print hello world">
+      <option name="closed" value="true" />
+      <created>1723438388444</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723438388444</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Image Compression">
+      <option name="closed" value="true" />
+      <created>1723470164446</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723470164446</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Image Compression">
+      <option name="closed" value="true" />
+      <created>1723473071347</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723473071347</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Synthetic Image Sample to differentiate Lanczos and Nearest Neighbor Interpolation">
+      <option name="closed" value="true" />
+      <created>1723565066731</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723565066731</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added Feature to choose Interpolation Method">
+      <option name="closed" value="true" />
+      <created>1723565291331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723565291331</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="print hello world" />
+    <MESSAGE value="Image Compression" />
+    <MESSAGE value="Added Synthetic Image Sample to differentiate Lanczos and Nearest Neighbor Interpolation" />
+    <MESSAGE value="Added Feature to choose Interpolation Method" />
+    <MESSAGE value="fixup! Added Synthetic Image Sample to differentiate Lanczos and Nearest Neighbor Interpolation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixup! Added Synthetic Image Sample to differentiate Lanczos and Nearest Neighbor Interpolation" />
   </component>
 </project>
