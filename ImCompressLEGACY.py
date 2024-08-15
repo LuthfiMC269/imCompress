@@ -54,12 +54,14 @@ def go():
 def exit_app():
     window.destroy()
 
-
+# initalize window
 window = tk.Tk()
 var = tk.IntVar()
 inter = tk.IntVar()
-window.resizable(False, False)
+window.resizable(True, True)
 window.title("Image Compresser")
+window.geometry("400x250")
+# window.configure(bg="#1F1F1F")
 # Title label
 title_label = tk.Label(window, text="Image Compressor", font=("Arial", 16, "bold"))
 title_label.pack(pady=10)
