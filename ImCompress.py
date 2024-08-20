@@ -31,6 +31,11 @@ Startpage.resizable(False, False)
 Startpage.title("Image Compresser")
 Startpage.geometry("1600x800")
 
+# Icon App
+photo = Image.open(resource_path("assets/images/icon.png"))
+ico = ImageTk.PhotoImage(photo)
+Startpage.wm_iconphoto(False, ico)
+
 # Frame
 containerframe = create_textframe1(Startpage)
 imageframe1 = tk.Frame(Startpage)
@@ -38,7 +43,7 @@ imageframe1 = tk.Frame(Startpage)
 # place layout
 imageframe1.place(x=0, y=0, relwidth=0.26, relheight=1)
 containerframe.place(relx=0.26, y=0, relwidth=0.74, relheight=1)
-img = Image.open(resource_path("icon.png"))
+img = Image.open(resource_path("assets/images/icon.png"))
 
 # Create the label and pack to fill the frame
 imagelabel = tk.Label(imageframe1, background="red")

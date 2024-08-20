@@ -33,6 +33,16 @@ def create_textframe1(parent):
                   font=("Helvetica", 16))
     l2.place(relx=0.5, rely=0.47, anchor="center")
     browse_button = tk.Button(textframe1, text="Browse", font=("Helvetica", 15), command=lambda: switch_to_textframe2(parent, textframe1),
-                              fg="#FFFFFF", bg="#4CAF50", activebackground="#45a049", width=10, height=1)
+                              fg="#FFFFFF", bg="#46c24b", activebackground="#169d1c", activeforeground="#FFFFFF", width=10, height=1, border=0, padx=16, pady=8, cursor="hand2")
     browse_button.place(relx=0.5, rely=0.58, anchor="center")
+    browse_button.bind("<Enter>", lambda e: 
+            browse_button.config(
+                bg="#28a72d"
+            )
+        )
+    browse_button.bind("<Leave>", lambda e: 
+            browse_button.config(
+                bg="#46c24b"
+            )
+        )
     return textframe1

@@ -1,3 +1,5 @@
+
+
 import tkinter as tk
 from tkinter import ttk, filedialog
 from PIL import Image, ImageTk
@@ -8,16 +10,18 @@ quality = 90
 sampling = 1
 updatedpath = 0
 
-
 def qual(value):
     global quality
     quality = round(float(value))
     print("Quality value: " + str(quality))
 
 
-def sample():
+def sample(value):
     global sampling
-    sampling = inter.get()
+    if value == "Lanczos Interpolation": 
+        sampling = 1
+    else: 
+        sampling = 2
     print("Sampling selected: " + str(sampling))
 
 
@@ -84,7 +88,7 @@ def imgpreview(event, imgprev, imagelabel):
 
 
 def create_textframe2(parent, filename):
-    global var, inter
+    global var, inter, selectedType1
     filepath = filename 
     var = tk.IntVar()
     inter = tk.IntVar()
@@ -124,23 +128,77 @@ def create_textframe2(parent, filename):
     qualscroll.place(relx=0.01, rely=0.3, relwidth=0.98, relheight=0.3)
     qualscroll.set(90)
     browsebutton = tk.Button(qualframe, text="Browse File", command=lambda: browse_file(imgframe, imagelabel),
-                             font=("Helvetica", 14))
+                             font=("Helvetica", 14), fg="#FFFFFF", bg="#f56806", activebackground="#e76003", activeforeground="#FFFFFF", border=0)
     browsebutton.place(relx=0.01, rely=0.62, relwidth=0.98, relheight=0.3)
 
-# Interpolation, Process Button Selection
+    # Interpolation, Process Button Selection
     interframe = tk.Frame(optionframe, bg="#373737")
     interframe.place(relx=0.51, relwidth=0.5, relheight=1)
     # Sampling Selection
-    sample2 = tk.Radiobutton(interframe, text="Nearest Interpolation", fg="white", bg="#373737",
-                             activebackground="#373737", activeforeground="white",
-                             variable=inter, value=0, command=sample, font=("Helvetica", 14))
-    sample2.select()
-    sample2.place(relx=0, rely=0.2, relwidth=0.5, relheight=0.5)
-    sample1 = tk.Radiobutton(interframe, text="Lanczos Interpolation", fg="white", bg="#373737",
-                             activebackground="#373737", activeforeground="white",
-                             variable=inter, value=1, command=sample, font=("Helvetica", 14))
-    sample1.place(relx=0.5, rely=0.2, relwidth=0.5, relheight=0.5)
-    process = tk.Button(interframe, text="Process", command=lambda: go(filepath), font=("Helvetica", 14))
+
+    # DropDown
+    optionsType1 = [ 
+        "Nearest Interpolation", 
+        "Lanczos Interpolation",  
+    ] 
+    
+    selectedType1 = tk.StringVar()
+    
+    selectedType1.set("Nearest Interpolation") 
+    
+    dropdownType1 = tk.OptionMenu(interframe, selectedType1, *optionsType1, command=sample)
+    dropdownType1.pack()
+    
+    dropdownType1.config(
+        border=0,
+        font=("Helvetica", 14),
+        bg="#0398e7",
+        fg="#FFFFFF",
+        activebackground="#0398e7",
+        activeforeground="#FFFFFF",
+        highlightthickness=0,
+        padx=14,
+        pady=8,
+        indicatoron=0,
+        direction="above",
+    )
+    
+    dropdownType1["menu"].config(
+        border=0,
+        font=("Helvetica", 13),
+        bg="#0285cb",
+        fg="#FFFFFF",
+        activebackground="#0285cb",
+        activeforeground="#FFFFFF",
+    )
+    
+    dropdownType1.place(relx=0, rely=0.2, relwidth=0.98, relheight=0.3)
+    
+    # Image 
+    # caret_up = ImageTk.PhotoImage(Image.open("assets/images/caret-up-white.png"))
+    # caret_up_label = tk.Label(
+    #     dropdownType1,
+    #     bg="#000000",
+    #     width=25,
+    #     height=25,
+    #     border=0,
+    #     highlightthickness=0,
+    #     image=caret_up,
+    # )
+    
+    # caret_up_label.place(relx=0.87, rely=0.35)
+
+    # sample2 = tk.Radiobutton(interframe, text="Nearest Interpolation", fg="white", bg="#373737",
+    #                          activebackground="#373737", activeforeground="white",
+    #                          variable=inter, value=0, command=sample, font=("Helvetica", 14))
+    # sample2.select()
+    # sample2.place(relx=0, rely=0.2, relwidth=0.5, relheight=0.5)
+    # sample1 = tk.Radiobutton(interframe, text="Lanczos Interpolation", fg="white", bg="#373737",
+    #                          activebackground="#373737", activeforeground="white",
+    #                          variable=inter, value=1, command=sample, font=("Helvetica", 14))
+    # sample1.place(relx=0.5, rely=0.2, relwidth=0.5, relheight=0.5)
+    
+    process = tk.Button(interframe, text="Process", command=lambda: go(filepath), font=("Helvetica", 14), fg="#FFFFFF", bg="#4CAF50", activebackground="#45a049", activeforeground="#FFFFFF", border=0)
     process.place(relx=0.01, rely=0.62, relwidth=0.98, relheight=0.3)
 
 
