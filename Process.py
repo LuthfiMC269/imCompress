@@ -128,8 +128,18 @@ def create_textframe2(parent, filename):
     qualscroll.place(relx=0.01, rely=0.3, relwidth=0.98, relheight=0.3)
     qualscroll.set(90)
     browsebutton = tk.Button(qualframe, text="Browse File", command=lambda: browse_file(imgframe, imagelabel),
-                             font=("Helvetica", 14), fg="#FFFFFF", bg="#f56806", activebackground="#e76003", activeforeground="#FFFFFF", border=0)
+                             font=("Helvetica", 14), fg="#FFFFFF", bg="#f56806", activebackground="#cb5301", activeforeground="#FFFFFF", border=0)
     browsebutton.place(relx=0.01, rely=0.62, relwidth=0.98, relheight=0.3)
+    browsebutton.bind('<Enter>', lambda e:
+            browsebutton.config(
+                bg="#e76003"
+            )
+        )
+    browsebutton.bind('<Leave>', lambda e:
+            browsebutton.config(
+                bg="#f56806"
+            )
+        )
 
     # Interpolation, Process Button Selection
     interframe = tk.Frame(optionframe, bg="#373737")
@@ -161,6 +171,7 @@ def create_textframe2(parent, filename):
         pady=8,
         indicatoron=0,
         direction="above",
+        cursor="hand2"
     )
     
     dropdownType1["menu"].config(
@@ -173,6 +184,17 @@ def create_textframe2(parent, filename):
     )
     
     dropdownType1.place(relx=0, rely=0.2, relwidth=0.98, relheight=0.3)
+    
+    dropdownType1.bind('<Enter>', lambda e:
+            dropdownType1.config(
+                bg="#0186cc"
+            )
+        )
+    dropdownType1.bind('<Leave>', lambda e:
+            dropdownType1.config(
+                bg="#0398e7"
+            )
+        )
     
     # Ini kenpa ga muncul gambar caretnya jir? help lol?
     # Image 
@@ -199,8 +221,18 @@ def create_textframe2(parent, filename):
     #                          variable=inter, value=1, command=sample, font=("Helvetica", 14))
     # sample1.place(relx=0.5, rely=0.2, relwidth=0.5, relheight=0.5)
     
-    process = tk.Button(interframe, text="Process", command=lambda: go(filepath), font=("Helvetica", 14), fg="#FFFFFF", bg="#4CAF50", activebackground="#45a049", activeforeground="#FFFFFF", border=0)
+    process = tk.Button(interframe, text="Process", command=lambda: go(filepath), font=("Helvetica", 14), fg="#FFFFFF", bg="#4CAF50", activebackground="#1c8720", activeforeground="#FFFFFF", border=0, cursor="hand2")
     process.place(relx=0.01, rely=0.62, relwidth=0.98, relheight=0.3)
+    process.bind('<Enter>', lambda e:
+            process.config(
+                bg="#45a049"
+            )
+        )
+    process.bind('<Leave>', lambda e:
+            process.config(
+                bg="#4CAF50"
+            )
+        )
 
 
 if __name__ == "__main__":
