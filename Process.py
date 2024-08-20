@@ -174,6 +174,7 @@ def create_textframe2(parent, filename):
     
     dropdownType1.place(relx=0, rely=0.2, relwidth=0.98, relheight=0.3)
     
+    # Ini kenpa ga muncul gambar caretnya jir? help lol?
     # Image 
     # caret_up = ImageTk.PhotoImage(Image.open("assets/images/caret-up-white.png"))
     # caret_up_label = tk.Label(
