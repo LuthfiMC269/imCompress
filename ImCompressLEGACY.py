@@ -30,11 +30,13 @@ def sample():
     sampling = inter.get()
     print("Sampling selected: " + str(sampling))
 
+
 def smpstring():
     if sampling == 1:
         return "lanczos"
     else:
         return "Nearest"
+
 
 def go():
     if filename:
@@ -45,7 +47,8 @@ def go():
             resized_image = image.resize(new_size, sampling)
             # 1 lancozs 4 box
             resized_image = resized_image.convert("RGB")
-            resized_image.save('compressed_image_' + str(quality) + "% " + smpstring() + ".jpg", optimize=True, quality=quality)
+            resized_image.save('compressed_image_' + str(quality) + "% " + smpstring() + ".jpg",
+                               optimize=True, quality=quality)
             success_label.config(text="Image compressed successfully!")
         except Exception as e:
             success_label.config(text=f"Error: {e}")
@@ -54,13 +57,14 @@ def go():
 def exit_app():
     window.destroy()
 
+
 # initalize window
 window = tk.Tk()
 var = tk.IntVar()
 inter = tk.IntVar()
 window.resizable(True, True)
 window.title("Image Compresser")
-window.geometry("400x250")
+window.geometry("650x250")
 # window.configure(bg="#1F1F1F")
 # Title label
 title_label = tk.Label(window, text="Image Compressor", font=("Arial", 16, "bold"))

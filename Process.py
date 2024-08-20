@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, filedialog
 from PIL import Image, ImageTk
+import winsound
 
 
 quality = 90
@@ -65,11 +66,10 @@ def go(path):
     resized_image = image.resize(new_size, sampling)
     # 1 lancozs 4 box
     resized_image = resized_image.convert("RGB")
-    resized_image.save('compressed_image_' + str(quality) + "% " + smpstring() + ".jpg", optimize=True, quality=quality)
-#           success_label.config(text="Image compressed successfully!")
-
-
-#           success_label.config(text=f"Error: {e}")
+    resized_image.save('compressed_image_' + str(quality) + "% "+smpstring() + ".jpg", optimize=True, quality=quality)
+    resultshow = Image.open("compressed_image_"+str(quality)+"% "+smpstring() + ".jpg")
+    resultshow.show()
+    winsound.PlaySound('SystemQuestion', winsound.SND_ALIAS)
 
 
 def imgpreview(event, imgprev, imagelabel):
@@ -85,7 +85,7 @@ def imgpreview(event, imgprev, imagelabel):
 
 def create_textframe2(parent, filename):
     global var, inter
-    filepath = filename
+    filepath = filename 
     var = tk.IntVar()
     inter = tk.IntVar()
     stylebg = ttk.Style()
@@ -100,7 +100,6 @@ def create_textframe2(parent, filename):
                             anchor="w", bg="#373737", fg="white")
     previewlabel.pack(side="left", expand=True, fill="both")
 
-    """Focus on this"""
 # Image Preview FROM STARTPAGE
     imgframe = tk.Frame(textframe2, bg="red")
     imgframe.place(relx=0.02, rely=0.1, relwidth=0.8, relheight=0.6)

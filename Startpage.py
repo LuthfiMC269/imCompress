@@ -11,14 +11,12 @@ def browse_file():
     )
     print("file selected: " + filename)
     return filename
-    qual()
-    sample()
 
 
 def switch_to_textframe2(parent, textframe1):
     filename = browse_file()
     if filename:  # Proceed only if a file is selected
-        # Destroy only the textframe1, not the entire parent widgets
+        # Destroy frame
         textframe1.destroy()
 
         # Create and place textframe2
@@ -38,4 +36,3 @@ def create_textframe1(parent):
                               fg="#FFFFFF", bg="#4CAF50", activebackground="#45a049", width=10, height=1)
     browse_button.place(relx=0.5, rely=0.58, anchor="center")
     return textframe1
-
